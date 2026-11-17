@@ -97,6 +97,39 @@ section[id] { scroll-margin-top: 16px; }
 .service-card li svg { color: var(--green); margin-top: 3px; }
 .service-card .btn { margin-top: 28px; }
 
+.service[id] { scroll-margin-top: 16px; }
+
+/* Strategy */
+.strategy-head { display: grid; grid-template-columns: 1fr 2fr; gap: 24px clamp(32px, 5vw, 80px); }
+.strategy-head .dot-label { padding-top: 16px; }
+.strategy-lead { margin-top: 20px; max-width: 34em; color: var(--muted); font-size: 19px; }
+.strategy-body { display: grid; gap: clamp(48px, 6vw, 80px); margin-top: clamp(48px, 6vw, 80px); }
+.split { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px clamp(24px, 4vw, 56px); }
+.split > div { padding-top: 24px; border-top: 2px solid var(--line); }
+.split .split-what { border-top-color: var(--green); }
+.split h3 { font-size: clamp(24px, 2.4vw, 30px); line-height: 1.14; margin-bottom: 12px; }
+.split p { max-width: 40ch; color: var(--muted); }
+.split-how h3 { color: var(--muted); }
+.split-how a { display: inline-block; margin-top: 14px; font-weight: 500; color: var(--ink); text-underline-offset: 4px; }
+.sub-title { font-size: 19px; font-weight: 500; color: var(--muted); letter-spacing: 0; margin-bottom: 8px; }
+.disciplines { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: clamp(24px, 4vw, 56px); }
+.disciplines li { padding-block: 18px; border-bottom: 1px solid var(--line); font-size: clamp(19px, 1.8vw, 22px); font-weight: 500; letter-spacing: -0.01em; }
+.horizon { display: grid; grid-template-columns: 1fr 3fr; gap: 6px; margin-top: 16px; }
+.horizon li::before { content: ""; display: block; height: 10px; border-radius: 5px; background: var(--ink); margin-bottom: 18px; }
+.horizon li:first-child::before { background: var(--green); }
+.horizon-value { display: block; font-size: clamp(28px, 3.2vw, 40px); font-weight: 500; line-height: 1.1; letter-spacing: -0.03em; }
+.horizon-label { color: var(--muted); }
+.strategy-body > .btn { justify-self: start; }
+
+/* Team */
+.team-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 56px clamp(32px, 5vw, 80px); margin-top: clamp(36px, 5vw, 64px); align-items: start; }
+.person-photo { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 12px; background: #d9dcd8; }
+.person-photo-wrap { max-width: 420px; }
+.person h3 { margin-top: 28px; font-size: clamp(26px, 2.6vw, 32px); line-height: 1.12; }
+.person-roles { margin-top: 10px; color: var(--muted); }
+.person-roles li:first-child { color: var(--green); font-weight: 500; }
+.person-bio { display: grid; gap: 14px; margin-top: 22px; max-width: 60ch; }
+
 /* Secure */
 .secure { padding: clamp(32px, 6vw, 80px) clamp(20px, 5vw, 72px); }
 .secure-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 28px 64px; }
@@ -167,7 +200,9 @@ section[id] { scroll-margin-top: 16px; }
 @media (max-width: 960px) {
   .nav-links { display: none; }
   .hero { min-height: 0; }
-  .hero-grid, .intro, .service, .faq, .contact-grid { grid-template-columns: minmax(0, 1fr); }
+  .hero-grid, .intro, .service, .faq, .contact-grid, .strategy-head { grid-template-columns: minmax(0, 1fr); }
+  .disciplines { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .strategy-head .dot-label { padding-top: 0; }
   .hero-copy { padding-block: 24px 16px; }
   .hero-visual { min-height: 0; aspect-ratio: 5 / 4; }
   .dot-label { padding-top: 0; }
@@ -183,6 +218,10 @@ section[id] { scroll-margin-top: 16px; }
   .intro-cells > div + div { margin-top: 32px; padding-top: 32px; border-top: 1px solid var(--line); }
   .secure-points li, .secure-points li:first-child { padding: 18px 0; border-left: 0; border-top: 1px solid var(--line-on-ink); }
   .steps { gap: 40px; }
+  .split, .disciplines, .horizon, .team-grid { grid-template-columns: minmax(0, 1fr); }
+  .horizon { gap: 24px; }
+  .horizon li:first-child::before { width: 30%; }
+  .strategy-body > .btn { justify-self: stretch; }
   .field-row { grid-template-columns: minmax(0, 1fr); }
   .form-card .btn { justify-self: stretch; }
   .hero-copy .btn, .service-card .btn, .final .btn, .secure .btn, .intro-cells .btn { width: 100%; }

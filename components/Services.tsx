@@ -6,7 +6,7 @@ export function Services() {
     <section className="band" id="services">
       <div className="container service-rows">
         {site.services.map((service) => (
-          <article className="service" key={service.title}>
+          <article className="service" key={service.title} id={service.id}>
             <div className="service-head">
               <h2>{service.title}</h2>
               {service.aside && <p className="service-aside">{service.aside}</p>}
@@ -23,7 +23,7 @@ export function Services() {
                   </li>
                 ))}
               </ul>
-              <Button href={site.links.learnMore}>{service.cta}</Button>
+              <Button href={service.href ?? site.links.learnMore} interest={service.interest}>{service.cta}</Button>
             </div>
           </article>
         ))}
