@@ -12,7 +12,7 @@ npm run dev      # open http://localhost:3000
 
 ## Page
 A single landing page at `/`. The layout and style follow the Nuvane Webflow template; the sections follow `copy.md`:
-Hero, Intro (CAC), Services (Tax, SCUML), Secure, Statement, How It Works, FAQ, Final CTA, Contact, Footer.
+Hero, Intro (CAC), Services (Tax, SCUML, Project management), Strategy consulting, Team, Secure, Statement, How It Works, FAQ, Final CTA, Contact, Footer.
 
 ## Where things live
 ```
@@ -24,6 +24,7 @@ app/api/contact/    Contact form endpoint (emails the message via Resend)
 lib/contact.ts      Contact form validation (used by the form and the API route)
 components/         One component per section
 content/site.ts     ALL the copy and links. Edit text here, not in the components
+public/images/      Team photos (benjamin-gar.jpg, nguhiden-gar.jpg)
 copy.md             The client's web copy as supplied
 ```
 
@@ -46,6 +47,9 @@ The "I'm getting in touch about" options are in `content/site.ts` (`contact.form
 ## Still to do before launch
 Search the code for `TODO`:
 - **Contact form:** add the Resend environment variables above, and the client's public email as `contact.form.to`.
+- **Project management:** the three points were drafted, not supplied. Confirm them (`services` in `content/site.ts`).
+- **Compliance-only wording:** the hero, Secure section, How it works, FAQ and final call to action still describe only CAC, tax and SCUML, as in the client's copy. Ask whether they want strategy and project management mentioned there.
+- **Team:** confirm Nguhiden's title at B.I.G Consultancy, if she has one (`team` in `content/site.ts`).
 - **Form wording:** the Contact heading, intro, dropdown options and messages weren't in the client's copy. Confirm them.
 - **Learn more:** both buttons go to the FAQ, because the copy has no separate service pages.
 - **Contact details:** the footer shows `[Add phone, email and address]`.

@@ -2,9 +2,9 @@
 
 export const site = {
   name: "B.I.G Consultancy",
-  title: "B.I.G Consultancy | CAC Registration, Tax Filing & SCUML Compliance",
+  title: "B.I.G Consultancy | Strategy, Project Management, CAC Registration & Compliance",
   description:
-    "Your business identity needs legal recognition. Register your Business/Company under CAC, file your taxes and protect your business with SCUML compliance.",
+    "Strategy consulting for leadership teams and boards, project management, CAC registration, tax filing and SCUML compliance from B.I.G Consultancy.",
 
   links: {
     // Every "get started" button on the page opens the contact form.
@@ -15,6 +15,7 @@ export const site = {
 
   nav: [
     { label: "Services", href: "#services" },
+    { label: "Strategy", href: "#strategy" },
     { label: "How it works", href: "#how-it-works" },
     { label: "FAQ", href: "#faq" },
     { label: "Contact", href: "#contact" },
@@ -61,7 +62,87 @@ export const site = {
       ],
       cta: "Learn more",
     },
+    {
+      // TODO: drafted from the client's brief ("add a service for Project Management").
+      // Confirm the three points with the client.
+      id: "project-management",
+      title: "We Provide Project Management Services:",
+      items: [
+        "Plan each project’s scope, timeline, budget and milestones.",
+        "Coordinate your team, suppliers and stakeholders, with a clear owner for every task.",
+        "Track progress, manage risks and report to leadership until the project is delivered.",
+      ],
+      cta: "Talk to us about a project",
+      href: "#contact",
+      interest: "projects",
+    },
   ],
+
+  // Strategy consulting section (#strategy). Written from the client's description of the service.
+  strategy: {
+    label: "Strategy consulting",
+    title: "Strategy consulting for leadership teams and boards",
+    lead: "We advise C-suite executives and boards on high-level, long-term decisions, rather than day-to-day operations.",
+    what: {
+      title: "What your business should do",
+      body: "Whether to enter a new market, launch a product or restructure. This is the question strategy consulting answers.",
+    },
+    how: {
+      title: "How to carry it out",
+      body: "Executing and implementing the plan is the work of management consulting and project management.",
+      link: { label: "See our project management service", href: "#project-management" },
+    },
+    disciplinesTitle: "Where we advise",
+    disciplines: [
+      "Corporate strategy",
+      "Business model transformation",
+      "Mergers and acquisitions (M&A)",
+      "Digital strategy",
+      "Economic policy",
+      "Organisational strategy",
+    ],
+    horizonTitle: "How long an engagement takes",
+    horizon: [
+      { value: "4–8 weeks", label: "A typical diagnostic project" },
+      { value: "3+ years", label: "The strategic vision it plans for" },
+    ],
+    cta: "Talk to us about strategy",
+  },
+
+  // Team section (#team). Bios as supplied by the client; only the firm's name was made consistent.
+  team: {
+    title: "The people behind B.I.G Consultancy",
+    people: [
+      {
+        name: "Benjamin Gar",
+        roles: [
+          "Chief Executive Officer, B.I.G Consultancy",
+          "Technology Entrepreneur",
+          "Data & Cybersecurity Professional",
+        ],
+        photo: "/images/benjamin-gar.jpg",
+        bio: [
+          "Benjamin Gar is a multidisciplinary professional with a background in computer science, data analysis, technology entrepreneurship and community development. He began his career as a Data Analyst and Supervisor at Basmak Technologies (2014–2018), then founded and led B.I.G. Computers as CEO from 2018 to date, building strong experience in business management, strategic decision-making and organisational leadership.",
+          "He holds a B.Sc. in Computer Science from the University of Mkar and cybersecurity certifications from Google, NITDA and Cisco. He also has experience in the insurance sector and a strong interest in development initiatives that support women and vulnerable groups. He served as President of the Rotary Club of Makurdi for the 2025/2026 Rotary year.",
+          "Benjamin leads B.I.G Consultancy with a focus on analytical rigour, practical execution and service-oriented leadership.",
+        ],
+      },
+      {
+        name: "Nguhiden Jessica Gar",
+        roles: [
+          // TODO: confirm Nguhiden's title at B.I.G Consultancy, if she has one.
+          "Communications Strategist",
+          "Programme & Operations Professional",
+          "Team Leader",
+        ],
+        photo: "/images/nguhiden-gar.jpg",
+        bio: [
+          "Nguhiden is a communications strategist, writer and programme operations professional with over a decade of experience in communications, digital marketing, research and content development. She has worked with businesses, educational institutions, ministries and personal brands, developing communication strategies, coordinating multi-platform campaigns and managing projects across sectors.",
+          "A proven leader, she holds a B.Sc. in Sociology (Second Class Upper Division) from the University of Mkar, and is committed to building people, systems and organisations that deliver lasting value.",
+        ],
+      },
+    ],
+  },
 
   secure: {
     title: "Your Business Entity Is More Secure with B.I.G Consultancy",
@@ -163,6 +244,8 @@ export const contact = {
     error: "Your message wasn’t sent. Please try again in a few minutes.",
     // `value` is what links use to pre-select an option, e.g. <a href="#contact" data-interest="tax">
     interests: [
+      { value: "strategy", label: "Strategy consulting" },
+      { value: "projects", label: "Project management" },
       { value: "cac", label: "CAC registration" },
       { value: "tax", label: "Tax filing" },
       { value: "scuml", label: "SCUML compliance" },
